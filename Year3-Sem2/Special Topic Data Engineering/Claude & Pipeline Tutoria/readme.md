@@ -1,27 +1,26 @@
-# Tutorial: End-to-End Azure Cloud Data Engineering Pipeline (Medallion Architecture)
+# Tutorial 4: AI-Assisted Data Engineering Pipeline with Apache Airflow & Claude Haiku
 
 ## 🛠️ Technology Stack Used
-* **Orchestration:** Azure Data Factory (ADF)
-* **Storage Layers:** Azure Data Lake Storage Gen2 (ADLS Gen2)
-* **Compute / Transformation:** Azure Databricks (PySpark Notebooks)
-* **Data Warehousing & Serving:** Azure Synapse Analytics (Serverless SQL Pools)
-* **Business Intelligence / Analytics:** Microsoft Power BI
-* **Local Ingestion Agent:** Self-Hosted Integration Runtime (SHIR)
+* **Workflow Orchestration Engine:** Apache Airflow (Directed Acyclic Graphs / DAGs)
+* **LLM Engine Platform:** Airia AI Agent Platform
+* **Cognitive AI Model Platform:** Anthropic Claude Haiku 4.5 via Secure REST API Operators
+* **Data Engineering & Clean-Up Library:** Python `pandas`
+* **Programming Environment:** Python Local Runtimes & OS Environment Variables Management
 
-## ☁️ Architecture & Data Lineage Flow Design
+## 🤖 Orchestration & Evaluation Pipeline Stages
 
-| Step | Phase / Layer | Technical Tool Used | Objective & Description |
+| Stage | Task ID / Block | Technology Stack | Core Functional Role & Description |
 | :--- | :--- | :--- | :--- |
-| **1** | **Automated Ingestion** | Azure Data Factory (ADF) | Uses a `Lookup` and `ForEach` loop to extract table name lists from an on-premises SQL Server via a Self-Hosted Integration Runtime (SHIR). |
-| **2** | **Raw Data Landing** | Bronze Layer (ADLS Gen2) | Securely stores an exact, unaltered raw copy of the source data formatted as high-performance Parquet files. |
-| **3** | **Data Cleaning** | Silver Layer (Azure Databricks) | Executes PySpark notebooks to handle complex date formats, remove empty rows, and enforce consistent column naming conventions. |
-| **4** | **Data Enrichment** | Gold Layer (Azure Databricks) | Applies business logic rules and data aggregations to transform structured tables into optimized analytical star schema layouts. |
-| **5** | **Data Serving** | Azure Synapse Analytics | Generates serverless SQL Views over the Gold container files, allowing direct querying without copying data back and forth. |
-| **6** | **Data Visualization**| Microsoft Power BI | Connects securely to Synapse to turn raw business data into an interactive, cross-filtered Sales Performance KPI Dashboard. |
+| **1** | `extract_data` | Apache Airflow Operator | Automatically unzips and verifies the local directory pathing for the incoming, unverified source dataset (`customer_data.csv`). |
+| **2** | `load_data` | Python / Staging Folder | Replicates and isolates the raw, unverified data payload strings into a clean local staging area directory to protect raw pipeline lineage. |
+| **3** | Dataset Profiling | Airia Agent / Claude Haiku 4.5 | Examines the unverified dataset structure to dynamically parse data layouts, map basic column types, and evaluate total record numbers. |
+| **4** | Issue Detection | Airia Agent / Claude Haiku 4.5 | Contextually inspects text rows to flag missing cells, duplicate IDs, invalid emails, and bad spending numbers, grading issues as Critical, Warning, or Info. |
+| **5** | Report Generation | Airia Agent / Claude Haiku 4.5 | Translates technical errors into a highly concise Markdown diagnostic report log, outlining priority recommendations without breaking the automated flow. |
+| **6** | `transform_data` | Python `pandas` Script | Executes repeatable data transformations using deterministic clean-up rules based on the AI inspection (dropping 9 corrupted rows to deliver 51 clean rows). |
 
 ---
 
 ## 📑 Personal Reflection
 
 ### Poh Lok Yee
-This project made the functional realities of enterprise cloud architecture highly tangible, moving past purely theoretical concepts. Implementing the pipeline required a significant amount of extra time dedicated to fine-tuning service configurations and independently debugging errors. Specifically, diagnosing data movement failures through the Self-Hosted Integration Runtime and fixing workflow breaks in Databricks notebooks helped me appreciate the rigorous environment tuning required to keep real data systems operational. Ultimately, resolving these unexpected bugs drastically enhanced my practical engineering and problem-solving skills.
+This tutorial perfectly demonstrated how modern workflows are moving past rigid, hardcoded data rules toward intelligent, context-aware LLM inspections. Orchestrating task dependencies in Apache Airflow showed me exactly how datasets move safely between cloud platforms and local systems. While configuring the Airflow operators to map payload schemas and API keys to the external Airia platform caused some tricky connection mismatches initially, it highlighted critical lessons in cloud integration. Furthermore, I learned that a robust pipeline should use the AI model strictly for flexible reporting, leaving the deterministic dataset cleaning to programmatic tools like `pandas`, resulting in a highly successful hybrid framework.
