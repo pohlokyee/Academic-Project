@@ -1,24 +1,19 @@
-# Tutorial: End-to-End Azure Cloud Data Engineering Pipeline
+# Tutorial: End-to-End Azure Cloud Data Engineering Pipeline (Medallion Architecture)
 
 ## ☁️ Architecture & Data Lineage Flow Design
-The data framework acts as an end-to-end cloud pipeline, mapping raw on-premises infrastructure into actionable business intelligence metrics via the Microsoft Azure ecosystem:
 
-* **Step 1: Automated Lookup Loop (Azure Data Factory)**
-  ADF uses a relational query loop to parse source table directories and trigger a parameterized ingestion cascade across local storage networks via a Self-Hosted Integration Runtime (SHIR).
-* **Step 2: Raw Extraction Storage (Bronze Landing Zone)**
-  Data drops directly into ADLS Gen2 object storage containers, maintaining unaltered raw transaction states inside high-performance binary Parquet storage.
-* **Step 3: Schema Conformance & Standard Cleaning (Silver Transformation Layer)**
-  Azure Databricks PySpark nodes spin up to filter out record breaks, unify non-conforming system timestamps, and fill empty cell constraints.
-* **Step 4: Business Logic Enforcements (Gold Analytical Layer)**
-  Databricks scripts handle deep dimensional processing, grouping key revenue matrices and organizing table architectures to match formal star schemas.
-* **Step 5: High-Performance Logical Layering (Azure Synapse Serving Layer)**
-  Exposes the physical Gold files directly via high-speed, query-optimized SQL Views, protecting system data lineage patterns without duplicating files.
-* **Step 6: Metric Visualization Panels (Microsoft Power BI)**
-  The final reporting application attaches directly to the Synapse views to build real-time interactive cross-filtering dashboard layouts for organizational stakeholders.
+| Step | Phase / Layer | Technical Tool Used | Objective & Description |
+| :--- | :--- | :--- | :--- |
+| **1** | **Automated Ingestion** | Azure Data Factory (ADF) | Uses a `Lookup` and `ForEach` loop to extract table name lists from an on-premises SQL Server via a Self-Hosted Integration Runtime (SHIR). |
+| **2** | **Raw Data Landing** | Bronze Layer (ADLS Gen2) | Securely stores an exact, unaltered raw copy of the source data formatted as high-performance Parquet files. |
+| **3** | **Data Cleaning** | Silver Layer (Azure Databricks) | Executes PySpark notebooks to handle complex date formats, remove empty rows, and enforce consistent column naming conventions. |
+| **4** | **Data Enrichment** | Gold Layer (Azure Databricks) | Applies business logic rules and data aggregations to transform structured tables into optimized analytical star schema layouts. |
+| **5** | **Data Serving** | Azure Synapse Analytics | Generates serverless SQL Views over the Gold container files, allowing direct querying without copying data back and forth. |
+| **6** | **Data Visualization**| Microsoft Power BI | Connects securely to Synapse to turn raw business data into an interactive, cross-filtered Sales Performance KPI Dashboard. |
 
 ---
 
 ## 📑 Personal Reflection
 
 ### Poh Lok Yee
-This project made the functional realities of building an enterprise cloud infrastructure highly tangible, moving past purely theoretical concepts. Implementing the end-to-end cloud pipeline required a significant amount of extra time dedicated to fine-tuning service configurations and debugging unexpected pipeline errors. Specifically, diagnosing data movement failures through the Self-Hosted Integration Runtime and fixing workflow breaks in Databricks notebooks helped me appreciate the rigorous environment tuning required to keep real data systems operational. Ultimately, fixing these unscripted issues significantly built up my engineering problem-solving capacity and practical cloud skills.
+The project made me realize the functionality of a complete data engineering pipeline in more than theoretical terms. Although the tutorial appeared simple and just a few hours, but I encountered a few problems when implementing it, especially the service configuration and pipeline errors, which did not necessarily work as expected and took me few days to complete it. I wasted precious time in debugging issues like data movement failure and minor errors in the workflow that led to the pipeline breaking. These issues helped me to understand that it takes time and many efforts to create a working system. It was an experience that enhanced my problem-solving abilities and demonstrated that true learning occurs when you are solving an unexpected problem rather than following the instructions.
