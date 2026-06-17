@@ -1,5 +1,8 @@
 # Tutorial 2: Apache Spark ETL Pipeline
 
+## 🎯 What this Tutorial Does
+This project constructs a high-performance big data pipeline designed to ingest and process a massive 2.2GB Brazilian National Basic Education Census dataset. It extracts unnormalized historical data across 12 years, heavily compresses it for performance optimization, flattens the tables into a multi-dimensional star schema for analytics, and loads millions of rows into a production relational database server.
+
 ## 🛠️ Technology Stack Used
 * **Core Engine:** Apache Spark / PySpark
 * **Virtualization & Environments:** Docker & Docker Compose

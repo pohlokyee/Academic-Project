@@ -1,5 +1,8 @@
 # Tutorial 4: AI-Assisted Data Engineering Pipeline with Apache Airflow & Claude Haiku
 
+## 🎯 What this Tutorial Does
+This project builds an automated hybrid data validation pipeline orchestrated by Apache Airflow. Instead of relying on rigid, manually coded parameters to check dataset cleanliness, it embeds a natural language AI agent platform (Claude Haiku 4.5) straight into the data stream to read files contextually, profile layouts, detect multi-tiered anomaly severities, and generate actionable engineering logs.
+
 ## 🛠️ Technology Stack Used
 * **Workflow Orchestration Engine:** Apache Airflow (Directed Acyclic Graphs / DAGs)
 * **LLM Engine Platform:** Airia AI Agent Platform

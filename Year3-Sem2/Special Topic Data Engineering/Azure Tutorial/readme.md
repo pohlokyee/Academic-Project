@@ -1,5 +1,8 @@
 # Tutorial 1: End-to-End Azure Cloud Data Engineering Pipeline (Medallion Architecture)
 
+## 🎯 What this Tutorial Does
+This project automates the extraction, transformation, and visualization of enterprise sales data by migrating it from an on-premises infrastructure into the Microsoft Azure cloud system. It builds a structured pipeline that cleans messy operational records through a multi-layered storage framework and serves them directly as ready-to-use business intelligence insights.
+
 ## 🛠️ Technology Stack Used
 * **Orchestration:** Azure Data Factory (ADF)
 * **Storage Layers:** Azure Data Lake Storage Gen2 (ADLS Gen2)

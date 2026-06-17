@@ -1,5 +1,8 @@
 # Tutorial 3: Image Classification Using CNN & Enhanced CNN Architecture
 
+## 🎯 What this Tutorial Does
+This project implements deep learning algorithms to automatically identify and categorize graphic image patterns from the CIFAR-10 computer vision dataset. It steps through pixel preprocessing and contrasts basic machine learning methods (ANNs) with deep learning systems (CNNs) before deploying an advanced, custom-tuned convolutional model that systematically eliminates prediction errors and pattern memorization.
+
 ## 🛠️ Technology Stack Used
 * **Deep Learning Framework:** TensorFlow & Keras
 * **Dataset Management:** CIFAR-10 open-source computer vision repository
