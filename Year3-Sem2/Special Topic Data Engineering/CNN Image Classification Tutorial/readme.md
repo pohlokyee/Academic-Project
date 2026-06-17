@@ -1,33 +1,22 @@
 # Tutorial 3: Image Classification Using CNN & Enhanced CNN Architecture
 
-## 🧠 Pipeline Workflow Overview
-This project maps out an incremental optimization framework for deep learning architectures:
+## 🧠 Deep Learning Pipeline Stages
 
-> **Step 1: Dataset Normalization**
-> * Pixel structures are isolated and adjusted from their raw 0-255 scale into a uniform decimal range between 0 and 1.
-> * This stabilizes gradient descents and optimizes neural training performance over continuous execution loops.
-
-> **Step 2: Baseline Multi-Layer Perceptron Evaluation (ANN)**
-> * Input data undergoes structural flattening directly into an elementary one-dimensional vector space.
-> * The system executes training via standard Dense layers, discarding essential spatial data boundaries and hitting an accuracy floor of 48%.
-
-> **Step 3: Shallow Feature Extraction (Baseline CNN)**
-> * Incorporates structured two-dimensional feature filters (`Conv2D`) and down-sampling pooling loops (`MaxPooling2D`).
-> * Automatically isolates basic edge vectors, lifting performance metrics to 69.48% but introducing a rigid 10.48% overfitting gap.
-
-> **Step 4: Architectural Scaling & Regularization (Enhanced CNN)**
-> * Expands the depth parameters to six unique convolutional layers running filter arrays that scale linearly from 32 to 128.
-> * Integrates explicit `BatchNormalization` zones alongside aggressive random parameter drops (`Dropout` bounds of 25% to 50%).
-
-> **Step 5: Random In-Memory Transformations (Data Augmentation)**
-> * Deploys real-time image shifts, zooms, flips, and rotations using Keras `ImageDataGenerator` functions.
-> * Forces the network parameters to extract generalized patterns rather than memorizing localized coordinates, lowering the model overfitting gap to 1.37% and raising test accuracy to 76.20%.
+| Stage | Focus Area | Layer / Method Applied | Objective & Description |
+| :--- | :--- | :--- | :--- |
+| **1** | **Data Preprocessing** | Pixel Intensity Scaling | Divides pixel RGB numbers by 255.0 to normalize image data into a uniform smaller range between 0 and 1 for optimal network learning stability. |
+| **2** | **Baseline Modeling** | Artificial Neural Network (ANN) | Flattens images into a single 1D vector and processes them through Dense layers, which drops spatial relationships and caps testing accuracy at 48%. |
+| **3** | **Spatial Extraction** | Baseline CNN Framework | Integrates standard `Conv2D` filters and `MaxPooling2D` loops to automatically isolate spatial edges, increasing accuracy to 69.48% but leaving a 10.48% overfitting gap. |
+| **4** | **Model Regularization** | Batch Normalization & Dropout | Adds normalization after every layer to balance features, plus dropouts (25% to 50%) to force alternative neural pathways and prevent absolute pattern memorization. |
+| **5** | **Data Augmentation** | Keras `ImageDataGenerator` | Injects real-time horizontal flips, shifts, rotations, and zooms in memory during runtime to drastically reduce the model overfitting gap to 1.37% and lift accuracy to 76.20%. |
 
 ---
 
 ## 📑 Personal Reflection
 
 ### Poh Lok Yee
-This project was an insightful lesson in incremental model optimization, taking us from a basic ANN to a baseline CNN, and finally to an enhanced CNN architecture. Working independently on Section 4.0 was highly rewarding. It required diagnosing baseline limitations and applying targeted strategies—such as expanding convolutional layers, batch normalization, dropout, and data augmentation (`ImageDataGenerator`) to build a practical understanding of deep learning behaviors. 
+This tutorial was not just about getting a model to run successfully, but also about understanding the process of improving it step by step. Starting from a basic ANN, then moving to a baseline CNN, and finally working through enhancing the CNN with deeper layers, regularization, and data augmentation gave a much more complete picture of how model development actually works in practice. Each stage built on the previous one, making it easier to see how each change contributed to better and more reliable classification results overall.
 
-An invaluable architectural takeaway was that model evaluation cannot rely on accuracy alone; tracking the overfitting gap is equally crucial. Seeing our overfitting gap drop from 10.48% to just 1.37% after applying regularization proved that deliberate structural changes are key to making a model truly generalize to new, unseen testing data.
+The most challenging yet rewarding part of this tutorial was working on Section 4.0 independently. Identifying the limitations of the baseline model and then applying targeted improvements such as adding more convolutional layers, introducing batch normalization and dropout, and using data augmentation required more than just writing code. It required understanding the reasoning behind each decision and observing how each change affected the model behaviour. This process helped build a more practical and analytical way of thinking about model development.
+
+One important lesson learned from this tutorial is that evaluating a model should not rely on accuracy alone. Initially, the tendency was to only look at whether the accuracy number increased as the main indicator of improvement. However, through working on the comparison between the baseline and enhanced CNN, it became clear that the overfitting gap is equally important to consider. A model can show a high training accuracy while still performing poorly on new images, which means it has memorized the training data rather than truly learned from it. Seeing the overfitting gap reduce from 10.48% to just 1.37% after applying regularization techniques made this lesson much more concrete and easier to appreciate through actual results rather than theory alone. This tutorial strengthened knowledge in deep learning model design, evaluation, and improvement. The experience of building, comparing, and analyzing two different CNN models also developed a better appreciation for how small but deliberate architectural changes can lead to meaningful improvements in real-world classification performance.
