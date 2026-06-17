@@ -1,5 +1,13 @@
 # Tutorial 1: End-to-End Azure Cloud Data Engineering Pipeline (Medallion Architecture)
 
+## 🛠️ Technology Stack Used
+* **Orchestration:** Azure Data Factory (ADF)
+* **Storage Layers:** Azure Data Lake Storage Gen2 (ADLS Gen2)
+* **Compute / Transformation:** Azure Databricks (PySpark Notebooks)
+* **Data Warehousing & Serving:** Azure Synapse Analytics (Serverless SQL Pools)
+* **Business Intelligence / Analytics:** Microsoft Power BI
+* **Local Ingestion Agent:** Self-Hosted Integration Runtime (SHIR)
+
 ## ☁️ Architecture & Data Lineage Flow Design
 
 | Step | Phase / Layer | Technical Tool Used | Objective & Description |
@@ -16,4 +24,4 @@
 ## 📑 Personal Reflection
 
 ### Poh Lok Yee
-The project made me realize the functionality of a complete data engineering pipeline in more than theoretical terms. Although the tutorial appeared simple and just a few hours, but I encountered a few problems when implementing it, especially the service configuration and pipeline errors, which did not necessarily work as expected and took me few days to complete it. I wasted precious time in debugging issues like data movement failure and minor errors in the workflow that led to the pipeline breaking. These issues helped me to understand that it takes time and many efforts to create a working system. It was an experience that enhanced my problem-solving abilities and demonstrated that true learning occurs when you are solving an unexpected problem rather than following the instructions.
+This project made the functional realities of enterprise cloud architecture highly tangible, moving past purely theoretical concepts. Implementing the pipeline required a significant amount of extra time dedicated to fine-tuning service configurations and independently debugging errors. Specifically, diagnosing data movement failures through the Self-Hosted Integration Runtime and fixing workflow breaks in Databricks notebooks helped me appreciate the rigorous environment tuning required to keep real data systems operational. Ultimately, resolving these unexpected bugs drastically enhanced my practical engineering and problem-solving skills.
