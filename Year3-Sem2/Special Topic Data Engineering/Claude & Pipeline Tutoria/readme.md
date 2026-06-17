@@ -1,26 +1,19 @@
 # Tutorial 4: AI-Assisted Data Engineering Pipeline with Apache Airflow & Claude Haiku
 
-## 🤖 System Use Case & Pipeline Flow Overview
-This diagram outlines how natural language artificial intelligence agents are safely coupled alongside rigid, rule-based data systems to execute automated data pipeline quality orchestration:
+## 🤖 Orchestration & Evaluation Pipeline Stages
 
-[ Data Source ] ──> Step 1: Extract ──> Step 2: Load Staging Zone ──> Step 3: Invoke Airia API
-                                                                              │
-┌─────────────────────────────────────────────────────────────────────────────┘
-▼
-Step 4: Claude Haiku 4.5 Orchestrated Evaluation Stages
- ├── 📊 Stage A: Dataset Profiling (Structure inspection & layout parsing)
- ├── 🔍 Stage B: Quality Issue Detection (Anomalies classified as Critical/Warning/Info)
- └── 📄 Stage C: Contextual Summary Generation (Markdown diagnostic reporting logs)
-                                                                              │
-┌─────────────────────────────────────────────────────────────────────────────┘
-▼
-Step 5: Local Pandas Transformation ──> [ Drop 9 Corrupted Rows ] ──> Step 6: Export Clean Dataset
+| Stage | Task ID / Block | Technology Stack | Core Functional Role & Description |
+| :--- | :--- | :--- | :--- |
+| **1** | `extract_data` | Apache Airflow Operator | Automatically unzips and verifies the local directory pathing for the incoming, unverified source dataset (`customer_data.csv`). |
+| **2** | `load_data` | Python / Staging Folder | Replicates and isolates the raw, unverified data payload strings into a clean local staging area directory to protect raw pipeline lineage. |
+| **3** | Dataset Profiling | Airia Agent / Claude Haiku 4.5 | Examines the unverified dataset structure to dynamically parse data layouts, map basic column types, and evaluate total record numbers. |
+| **4** | Issue Detection | Airia Agent / Claude Haiku 4.5 | Contextually inspects text rows to flag missing cells, duplicate IDs, invalid emails, and bad spending numbers, grading issues as Critical, Warning, or Info. |
+| **5** | Report Generation | Airia Agent / Claude Haiku 4.5 | Translates technical errors into a highly concise Markdown diagnostic report log, outlining priority recommendations without breaking the automated flow. |
+| **6** | `transform_data` | Python `pandas` Script | Executes repeatable data transformations using deterministic clean-up rules based on the AI inspection (dropping 9 corrupted rows to deliver 51 clean rows). |
 
 ---
 
 ## 📑 Personal Reflection
 
 ### Poh Lok Yee
-This tutorial provided an excellent look into how modern pipelines use intelligent language models to handle data quality inspections rather than manually written validation rules. Using Apache Airflow and Directed Acyclic Graphs (DAGs), it was highly impressive to see how the Claude Haiku 4.5 agent successfully detected complex dataset flaws like formatting inconsistencies and impossible values using plain text prompts.
-
-The primary hurdle involved platform integrations—specifically, configuring the Airflow operators to properly map request headers and payloads to the external Airia API, which threw up tricky connection mismatches initially. Furthermore, we had to re-evaluate our pipeline logic after realizing the AI shouldn't stop the pipeline upon identifying flaws, but should handle flexible reporting instead. This allowed our deterministic `pandas` script to execute the strict cleaning rules, resulting in a successful hybrid workflow that reduced our messy dataset down to 51 clean rows in a 34.59-second run.
+This tutorial perfectly demonstrated how modern workflows are moving past rigid, hardcoded data rules toward intelligent, context-aware LLM inspections. Orchestrating task dependencies in Apache Airflow showed me exactly how datasets move safely between cloud platforms and local systems. While configuring the Airflow operators to map payload schemas and API keys to the external Airia platform caused some tricky connection mismatches initially, it highlighted critical lessons in cloud integration. Furthermore, I learned that a robust pipeline should use the AI model strictly for flexible reporting, leaving the deterministic dataset cleaning to programmatic tools like `pandas`, resulting in a highly successful hybrid framework.
