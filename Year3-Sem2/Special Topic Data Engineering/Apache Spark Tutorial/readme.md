@@ -1,21 +1,26 @@
 # Tutorial 2: Apache Spark ETL Pipeline
 
-## 🛠️ Project Execution Steps
-Below is the sequential breakdown of how data moves from raw files into the final business intelligence layer:
+## 🛠️ Technology Stack Used
+* **Core Engine:** Apache Spark / PySpark
+* **Virtualization & Environments:** Docker & Docker Compose
+* **Relational Database Server:** PostgreSQL
+* **Database Management UI:** Adminer
+* **Database Connectivity Driver:** Python `psycopg2` (JDBC Client execution)
+* **BI & Data Analytics:** Metabase
 
-| Step | Phase | Technical Execution | Objective |
+## 🛠️ Project Execution Steps
+
+| Step | Phase / Layer | Technical Execution | Objective & Description |
 | :--- | :--- | :--- | :--- |
-| **1** | **Ingestion & Compression** | Using PySpark to read raw text and write to binary columnar format. | Converts 2.2GB of messy CSV data into optimized Parquet files (~5x compression). |
-| **2** | **Dimensional Modeling** | Restructuring unnormalized flat data schemas via Spark DataFrame operations. | Decomposes 370 raw columns into a centralized Star Schema (1 Fact + 12 Dimension tables). |
-| **3** | **Database Migration** | Establishing a secure network bridge to dump records into production tables. | Appends 2.79 million fully transformed records into a PostgreSQL Database Server via JDBC. |
-| **4** | **Constraint Handling** | Spawning a native database cursor via Python relational database drivers. | Connects via `psycopg2` to explicitly apply standard DDL constraints like Primary Keys. |
-| **5** | **BI Dashboarding** | Connecting analytics-ready database schemas directly to visualization software. | Generates interactive historical trend visualizations using a Metabase dashboard. |
+| **1** | **Ingestion & Compression** | PySpark DataFrame API | Reads raw, semicolon-delimited Brazilian school census CSV text data and writes it out into a single compressed binary Parquet file (~5x storage savings). |
+| **2** | **Dimensional Modeling** | PySpark Operations | Restructures and deconstructs an unnormalized flat dataset containing 370 raw columns into a multi-dimensional Star Schema structure. |
+| **3** | **Database Migration** | Spark JDBC Connector | Connects to the target server to write and append approximately 2.79 million fully transformed fact records into the production system database. |
+| **4** | **Constraint Handling** | Python `psycopg2` Driver | Establishes a direct link with the PostgreSQL Database Server to manually execute SQL scripts for adding primary keys and descriptive constraints. |
+| **5** | **BI Dashboarding** | Metabase App Connection | Connects directly to the analytics-ready PostgreSQL database server schemas to construct interactive business trend charts and map graphs. |
 
 ---
 
 ## 📑 Personal Reflection
 
 ### Poh Lok Yee
-This tutorial provided a powerful, hands-on demonstration of how data moves within a real ETL pipeline system using Apache Spark. Processing 2.2GB of raw CSV data, converting it to Parquet, and loading 2.79 million rows into PostgreSQL made it clear why Spark is essential for big data engineering. A key technical takeaway was seeing how different tools complement each other—such as using Spark to write the data, but relying on `psycopg2` to separately execute `ALTER TABLE` commands for setting primary keys. 
-
-The setup on Windows brought several environment hurdles, including fixing `wget` incompatibilities, shifting file encoding to `iso-8859-1`, and troubleshooting a PostgreSQL compatibility issue that caused Metabase to fail on startup. Overcoming these challenges taught me how to construct precise AI diagnostics prompts and individual research workflows. Collaborating as a group by splitting tasks along CRISP-DM phases allowed us to build deep specialized knowledge while maintaining active communication to share cross-functional solutions whenever bugs appeared.
+This tutorial provided excellent hands-on exposure to an end-to-end big data pipeline. Processing a 2.2GB dataset with 2.79 million rows clearly showed the power of distributed tools like Apache Spark, while using `psycopg2` separately to enforce primary key constraints highlighted how different engineering tools must complement one another. Setting up the environment on Windows presented multiple unscripted challenges, including fixing `wget` script incompatibilities, adjusting encoding schemas to `iso-8859-1`, and resolving outdated container issues with Metabase. Overcoming these hurdles taught me how to write highly precise AI prompts for system diagnostics, while collaborating in a group allowed us to share technical solutions effectively.
