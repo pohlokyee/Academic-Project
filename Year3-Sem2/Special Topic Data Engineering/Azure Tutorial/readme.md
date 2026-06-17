@@ -1,4 +1,4 @@
-# Tutorial: End-to-End Azure Cloud Data Engineering Pipeline (Medallion Architecture)
+# Tutorial 1: End-to-End Azure Cloud Data Engineering Pipeline (Medallion Architecture)
 
 ## ☁️ Architecture & Data Lineage Flow Design
 
