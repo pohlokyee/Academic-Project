@@ -1,0 +1,11 @@
+supplier_id,supplier_name,country,reliability_rating,is_null_supplier_id,is_null_supplier_name,is_null_rating
+SUP001,ChemBase Sdn Bhd,Malaysia,High,0,0,0
+SUP002,SinoCoat Materials Co,China,Medium,0,0,0
+SUP003,Resin Tech Asia,Singapore,High,0,0,0
+SUP004,PackPro Solutions,Malaysia,High,0,0,0
+SUP005,Solvent King Pte Ltd,Singapore,Medium,0,0,0
+SUP006,Global Pigments Ltd,India,Medium,0,0,0
+SUP007,EuroChem Imports,Germany,High,0,0,0
+SUP008,Apex Packaging Sdn Bhd,Malaysia,High,0,0,0
+SUP009,Pacific Solvents Inc,Thailand,Low,0,0,0
+SUP010,Polymer Source Ltd,South Korea,Medium,0,0,0
