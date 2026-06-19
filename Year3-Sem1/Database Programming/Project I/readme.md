@@ -17,13 +17,13 @@ By applying structured **Data Definition Language (DDL) and Data Manipulation La
 
 ## ☁️ System Architecture & Data Lineage Flow
 
-The backend implementation structures data sequentially across distinct relational files to ensure ACID compliance, total referential consistency, and optimal search speeds[cite: 3].
+The backend implementation structures data sequentially across distinct relational files to ensure ACID compliance, total referential consistency, and optimal search speeds.
 
 | Step | Phase / Layer | Technical Component | Objective & Description |
 | :--- | :--- | :--- | :--- |
-| **1** | **Structural Creation** | Data Definition Layer (`P1_DDL.sql`)[cite: 3] | Generates the schema blueprint, implementing five foundational core tables (*Owner, Vet, Pet, Appointment, Medical_Record*)[cite: 3]. |
-| **2** | **Integrity Enforcement** | Relational Constraint Tier[cite: 3] | Hooks dependencies together using strict `PRIMARY KEY`, `FOREIGN KEY`, `NOT NULL`, and `UNIQUE` rule constraints[cite: 3]. |
-| **3** | **Data Seed & Ingestion** | Data Manipulation Layer (`P2_DML.sql`)[cite: 3] | Populates the base structures with realistic data lines, managing updates and safe deletion dependency flows[cite: 3]. |
-| **4** | **Complex Analytics Engine** | Data Query Layer (`P3_DQL.sql`)[cite: 3] | Runs relational joins, string logic operations, subqueries, and grouping logic to pull deep operational insight[cite: 3]. |
-| **5** | **Range Query Optimization** | B-Tree Performance Index (`idx_appt_date`)[cite: 3] | Optimizes range filters over targeted time boundaries, reducing search steps from whole-table loops down to narrow boundaries[cite: 3]. |
-| **6** | **Unstructured Text Processing** | Full-Text Search Index (`idx_medical_text`)[cite: 3] | Introduces text mining tokens across wide clinical rows (*diagnosis, treatment, notes*) using high-speed keyword arrays[cite: 3]. |
+| **1** | **Structural Creation** | Data Definition Layer (`P1_DDL.sql`) | Generates the schema blueprint, implementing five foundational core tables (*Owner, Vet, Pet, Appointment, Medical_Record*) |
+| **2** | **Integrity Enforcement** | Relational Constraint Tier | Hooks dependencies together using strict `PRIMARY KEY`, `FOREIGN KEY`, `NOT NULL`, and `UNIQUE` rule constraints. |
+| **3** | **Data Seed & Ingestion** | Data Manipulation Layer (`P2_DML.sql`) | Populates the base structures with realistic data lines, managing updates and safe deletion dependency flows. |
+| **4** | **Complex Analytics Engine** | Data Query Layer (`P3_DQL.sql`)| Runs relational joins, string logic operations, subqueries, and grouping logic to pull deep operational insight. |
+| **5** | **Range Query Optimization** | B-Tree Performance Index (`idx_appt_date`) | Optimizes range filters over targeted time boundaries, reducing search steps from whole-table loops down to narrow boundarie. |
+| **6** | **Unstructured Text Processing** | Full-Text Search Index (`idx_medical_text`)| Introduces text mining tokens across wide clinical rows (*diagnosis, treatment, notes*) using high-speed keyword arrays. |
