@@ -12,8 +12,3 @@ The repository is structured around four semester folders:
 | Year 3 Semester 1 | Artificial Intelligence, Database Programming, Enterprise System Development Management | Applied projects, SQL-based system work, and enterprise-style documentation. |
 | Year 3 Semester 2 | Business Intelligence, High Performance Data Processing, Special Topic in Data Engineering | Data engineering, scalable processing, and business intelligence projects. |
 
-## What You Will Find
-The repository contains a mix of course-level summaries and project materials such as notebooks, PDFs, SQL scripts, C++ files, Java code, JavaScript, and presentation documents. The main focus is on practical academic work, with each semester folder grouping the related subjects and their deliverables.
-
-## Purpose
-This portfolio is meant to provide a clear snapshot of the academic journey across multiple semesters, showing how the work progressed from foundational computing topics to applied data engineering and business intelligence projects.
