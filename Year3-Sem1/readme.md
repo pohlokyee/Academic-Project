@@ -1,21 +1,24 @@
-# Year 3 Semester 1
+# Academic Projects Portfolio | Year 3 Semester 1
 
-## Semester Introduction
-This semester focused on applied projects and system-level thinking. The learning combined AI prototyping, database system implementation, and enterprise project management practices. Many tasks were team-based and documentation-heavy, close to industry style.
+## Introduction
+Welcome to my academic project portfolio for Year 3, Semester 1. This semester focused on applied projects, system-level thinking, and industry-style documentation through AI, database programming, and enterprise system management.
 
-## Subject Overview
+The semester is centered around three core subjects:
+1. **Artificial Intelligence:** Building and documenting an AI prototype for a real prediction problem.
+2. **Database Programming:** Developing database scripts and a booking system with SQL-based phases.
+3. **Enterprise System Development Management:** Studying how enterprise projects are planned, managed, and documented.
 
-| Subject | Main Project / Work | Easy Description | Main Project Link |
-|---|---|---|---|
-| Artificial Intelligence | AI Flood Prediction System Prototype and group assignments | Built and documented an AI prototype to solve a real-world prediction problem. | [Prototype](./Artificial%20Intelligence/AI%20Flood%20Prediction%20System%20Prototype/readme.md) |
-| Database Programming | Project I (SQL phases), Project II (event booking system) | Designed databases, wrote SQL (DDL/DML/DQL/indexing), and built a booking system script. | [Event Booking System](./Database%20Programming/Project%20II/eventBookingSystem.js) |
-| Enterprise System Development Management | Hotel Management System project and industrial talk material | Learned enterprise system planning with project deliverables and management-focused artifacts. | [Hotel Management System](./Enterprise%20System%20Development%20Management/PROJECT%20Hotel%20Management%20System.docx) |
+---
 
-## Artificial Intelligence
-Main materials: prototype source folder and assignment reports.
+## Central Subject Directory
 
-## Database Programming
-Main materials: SQL scripts and JavaScript event booking system implementation.
+| Subject | Main Project / Work | Short Description | Main Project Link |
+| :--- | :--- | :--- | :--- |
+| **Artificial Intelligence** | AI Flood Prediction System Prototype and group assignments | Built an AI prototype and documented the approach for a real prediction use case. | [Prototype Folder](./Artificial%20Intelligence/AI%20Flood%20Prediction%20System%20Prototype/) |
+| **Database Programming** | Project I SQL phases and Project II event booking system | Designed databases, wrote SQL scripts, and built a booking system implementation. | [Event Booking System](./Database%20Programming/Project%20II/eventBookingSystem.js) |
+| **Enterprise System Development Management** | Hotel Management System project and industrial talk materials | Focused on enterprise planning, project coordination, and documentation. | [Project Folder](./Enterprise%20System%20Development%20Management/) |
 
-## Enterprise System Development Management
-Main materials: project documentation and report files.
+---
+
+## Semester Summary
+This semester leaned more toward applied system building and structured project delivery. The work combined technical implementation with documentation and management practices that are useful in larger team environments.
