@@ -1,27 +1,35 @@
-# Business Intelligence
+# High Performance Data Processing (SECP3843)
 
 ## Introduction
-Welcome to the repository for **Business Intelligence**. This course focuses entirely on the modern Business Intelligence (BI) lifecycle, emphasizing how raw enterprise data is transformed into strategic, actionable visual intelligence. 
+Welcome to the repository for **High Performance Data Processing (SECP3843)**. This course explores the intersection of High-Performance Computing (HPC) and big data analytics, focusing on the infrastructure, architectures, and parallel processing techniques required to translate massive, multi-gigabyte datasets into real-time actionable knowledge.
 
-Rather than just studying theoretical metrics, this curriculum delivers intensive, hands-on experience with industry-standard toolkits to solve real-world analytical problems. The core architecture of the course centers on mastering data preparation and building high-impact visual analytics dashboards.
+Rather than relying on traditional single-threaded tools, this curriculum deep-dives into distributed environments, optimizing compute resources, and building highly scalable data pipelines capable of handling real-time interrogation of extremely large data structures.
 
 ### Core Focal Points:
-* **Data Cleaning & Transformation (Alteryx):** Leveraging Alteryx for advanced data analytics, profiling, and structural data prep. This includes mastering complex data cleansing workflows, managing skewness, running interquartile range (IQR) calculations, and restructuring messy datasets into analytics-ready models.
-* **Visual Analytics (Power BI & Tableau):** Building interactive, executive-ready dashboards using Power BI and Tableau. This focuses on intuitive data modeling, defining key business metrics (KPIs), and designing dashboards that turn numbers into clear stories.
-* **The End-to-End BI Pipeline:** Understanding the complete journey of corporate data—taking raw transactional records, applying rigorous transformation logic, and generating user-friendly dashboards to drive executive decision-making.
+* **HPC Foundations & Architectures:** Understanding the underlying hardware and software paradigms governing high-performance data platforms, parallel frameworks, and compute resource allocation.
+* **Parallel & Distributed Processing:** Designing and implementing systems leveraging multithreading, multiprocessing (multi-core utilization), and distributed computing frameworks (such as Apache Spark and Dask).
+* **Cloud-Scale Data Platforms:** Gaining hands-on infrastructure engineering experience using **Amazon Web Services (AWS)** as an enterprise-grade data processing and deployment platform.
+* **Data Ingestion & Stream Processing:** Handling complex processing tasks ranging from heavy localized web scraping optimizations to real-time, low-latency streaming analytics.
 
 ---
 
-## Industry Engagement & Guest Talks
-A critical aspect of this course is bridging academic BI theory with real-world enterprise execution. Below is a summary of industry-led events, corporate engagements, and professional reflection posts tracking my journey through the business intelligence and corporate tech landscape.
+## Technical Certifications
+As part of mastering cloud infrastructure for high-performance workloads, this section tracks professional credentials and validated expertise through the AWS Academy ecosystem:
 
-| Title / Reflection | Date | Corporate | Reflection Link |
+| Certification / Badge Title | Issuing Authority | Professional Badge Link |
+| :--- | :--- | :--- |
+| **AWS Academy Graduate - AWS Academy Cloud Foundations** | Amazon Web Services (AWS) | [View Verification & Badge](https://www.linkedin.com/posts/pohlokyee_aws-academy-graduate-cloud-foundations-activity-7460377314556645376-Sf2c?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEhOzuoB6KAPNSWUt0Wwm1_yYBY6q_F3QoY) |
+| **AWS Academy Graduate - AWS Academy Cloud Developing** | Amazon Web Services (AWS) | [View Verification & Badge](https://www.linkedin.com/posts/pohlokyee_aws-academy-graduate-cloud-developing-activity-7473077307700715520-YBo_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEhOzuoB6KAPNSWUt0Wwm1_yYBY6q_F3QoY) |
+
+---
+
+## Academic Assignments & Projects
+
+Below is the central directory mapping the hands-on engineering workloads, optimization tasks, and system pipelines developed throughout this course.
+
+| Component | Task & Architecture Focus | Key Tech Stack | Resource / Repository Link |
 | :--- | :--- | :--- | :--- |
-| **Corporate Exposure:** Experiencing the Big 4 Ecosystem | 13 May 2026 | EY | [View LinkedIn Post](https://www.linkedin.com/posts/pohlokyee_when-big-4-feels-real-not-just-a-name-activity-7460408039368630273-qQ4Z?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEhOzuoB6KAPNSWUt0Wwm1_yYBY6q_F3QoY) |
-| **Career Engineering:** UTM 2u2i Industrial Internship Engagement | 20 May 2026 | UTM 2u2i Industry Partners | [View LinkedIn Post](https://www.linkedin.com/posts/pohlokyee_yesterday-i-joined-the-utm-2u2i-internship-activity-7462676134145732610-XFjq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEhOzuoB6KAPNSWUt0Wwm1_yYBY6q_F3QoY) |
-| **Peer Collaboration:** Deep Dive into Data Governance & Analytics | 25 May 2026 | Mr. Faiz Fablillah | - |
-
-### Industrial Activity Reflections
-####  Data Governance & Management
-While building beautiful Power BI and Tableau dashboards is powerful, their output is entirely dependent on the quality of the underlying data. This session emphasized **Data Governance**—the strategic policies, ownership frameworks, and lifecycle safeguards that prevent system clutter. Without clean data and a structured governance blueprint, even the most advanced BI dashboards fail. Working through these concepts highlighted the crucial intersection where rigorous data preparation in tools like Alteryx meets strategic business administration.
-
+| **Assignment 1** | **Architectural Comparative Analysis:** Evaluating architectural trade-offs (accuracy, latency, cost, complexity) between RAG-based systems and Standalone LLM systems. | Conceptual Modeling, Architectural Evaluation | [View Assignment](https://github.com/pohlokyee/Academic-Project/blob/8f843b9a22f2c9c9452e45d712aae281776c2e54/Year3-Sem2/High%20Performance%20Data%20Processing/Latest%20Poh%20Lok%20Yee.pdf) |
+| **Assignment 2** | **Mastering Big Data Handling:** Memory optimization, chunking, and parallelized processing of datasets exceeding 700MB. | Python, Dask, Pandas | [View GitHub Repository](https://github.com/sean-seah/HPDP/tree/main/2526/assignment/A2/Group%20Duoletgo) |
+| **Project 1** | **Optimizing Large-Scale Web Crawlers:** Building a parallel, ethical web scraper to ingest 100,000+ structured records from Malaysian websites with performance evaluation. | Multithreading, Multiprocessing, Distributed Frameworks | [View GitHub Repository](https://github.com/sean-seah/HPDP/tree/main/2526/project/BigPotato) |
+| **Project 2** | **Real-Time Sentiment Analysis:** Building a real-time streaming analytics pipeline for Malaysian social/news text data using a distributed broker and compute engine. | Apache Spark, Apache Kafka, NLP Models | [Link to Repository (Pending Deployment)]() |
